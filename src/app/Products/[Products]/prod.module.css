@@ -1,0 +1,120 @@
+/* Product Detail Container */
+.productDetail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: black; /* Dark blue futuristic gradient */
+    color: white;
+    padding: 40px;
+  }
+  
+  /* Main Title */
+  .main {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #00d9ff; /* Neon Blue */
+    text-align: center;
+  }
+  
+  /* Glassmorphism Card */
+  .productCard {
+    width: 80%;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 255, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .productCard:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 30px rgba(0, 0, 255, 0.8);
+  }
+  
+  /* Product Image */
+  .productImage {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.8);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .productImage:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Product Info */
+  .productInfo {
+    margin-left: 30px;
+    max-width: 500px;
+  }
+  
+  .productTitle {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #00d9ff; /* Neon Blue */
+  }
+  
+  .productDescription {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+  }
+  
+  .productPrice {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #00ffcc; /* Futuristic Neon Green */
+  }
+  
+  /* Add to Cart Button */
+  .addToCart {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: #007bff;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    cursor: pointer;
+    
+  }
+  
+  .addToCart:hover {
+    background: #0056b3;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.8);
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .productCard {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+    .productInfo {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+    .productImage {
+      width: 250px;
+    }
+  }
+  

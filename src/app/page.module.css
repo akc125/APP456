@@ -1,0 +1,303 @@
+.home {
+  width: 100%;
+  height: 500px;
+  background-color: black;
+  color: white;
+  display: flex;
+}
+.home_page {
+  /* display: flex; */
+
+  background-color: black;
+  width: 75%;
+  flex-grow: 1;
+}
+.div1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product_image {
+  width: 745px;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition effect */
+
+  /* Always glowing blue effect */
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.6);
+}
+.product_image:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 255, 1); /* Stronger glow */
+}
+.product_title {
+  border: 2px solid transparent; /* Default (no border) */
+  transition: border 0.3s ease-in-out; /* Smooth transition */
+  border-radius: 5px;
+  margin-top: 20px;
+  width: max-content;
+}
+
+.product_title:hover {
+  border: 2px solid blue; /* Blue border on hover */
+}
+.div2 {
+  width: 25%;
+  height: 100vh;
+  background-color: blue;
+}
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  color: white;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+.navbar_content {
+  padding-left: 48px;
+}
+.text {
+  width: 557px;
+}
+/* Change color on hover */
+.navbar_content a:hover {
+  color: blue;
+}
+
+/* Highlight active link */
+.navbar_content:active {
+  color: blue;
+  border-bottom: 2px solid blue;
+}
+.prod_card {
+  background-color: black;
+  color: white;
+}
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: black;
+  box-shadow: 0 4px 6px rgba(33, 0, 110, 0.1);
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(0, 0, 255, 0.897); /* Blue shadow on hover */
+}
+
+.card_img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.card_content {
+  padding: 15px;
+  text-align: center;
+}
+
+.card_title {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card_price {
+  font-size: 16px;
+  color: blue; /* Your theme color */
+  margin-top: 5px;
+}
+
+.card_button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: blue; /* Your theme color */
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 0 0 10px 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.card_button:hover {
+  background-color: darkblue; /* Darker blue on hover */
+}
+.cardstyle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Space between cards */
+  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+.div25 {
+  background: black;
+  height: 100vh;
+  color: white;
+  width: 25%;
+  position: fixed;
+  top: 43px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pord_ditils {
+  color: gray;
+  transition: color 0.3s ease-in-out;
+  text-decoration: none; /* Remove underline */
+}
+
+.pord_ditils:hover {
+  color: blue; /* Blue on hover */
+}
+
+.pord_ditils.active {
+  color: white; /* Turns white when active */
+  font-weight: bold;
+}
+
+
+
+.addToCart {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: #007bff;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+  width: 50%;
+}
+
+.addToCart:hover {
+  background: #0056b3;
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.8);
+  transform: scale(1.05);
+}
+.about_container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+  color: white;
+}
+
+.about_title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about_text {
+  font-size: 18px;
+  color: #555;
+  color: white;
+}
+
+.contact_container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+  color: white;
+}
+
+.contact_title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contact_text {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact_input,
+.contacttextarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact_textarea {
+  height: 100px;
+}
+
+.contact_button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact_button:hover {
+  background-color: #0056b3;
+}
+/* src/styles/footer.css */
+.footer_container {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer_text {
+  font-size: 14px;
+}
+
+.footer_nav {
+  display: flex;
+  gap: 15px;
+}
+
+.footer_link {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer_link:hover {
+  color: white;
+}
