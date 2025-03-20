@@ -36,7 +36,7 @@ export default function ProductCard(props:any) {
         <div>{prod.category}</div>
         <div>{prod.rating.rate}</div>
         <div>{prod.rating.count}</div>
-        <div style={{display:'flex',justifyContent:'center'}}> <button   className={styles.addToCart} onClick={()=>{router.push(`/Products/${prod.id}`)}}>detils</button>
+        <div style={{display:'flex',justifyContent:'center'}}> <button   className={styles.addToCart} onClick={()=>{router.push(`/products/${prod.id}`)}}>detils</button>
         {/* <button className={styles.addToCart} onClick={() => addToCart(prod)}>
             Add to Cart
           </button> */}

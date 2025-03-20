@@ -1,38 +1,44 @@
 import { title } from "process";
 import GotoCartButton from "../../Components/GotoCartButton";
 import { productServices } from "../../Services/services";
-import styles from "../[Products]/prod.module.css";
+import styles from "../[productId]/prod.module.css";
 import Image from "next/image";
 import { Metadata } from "next";
 
+type PageProps = {
+  params: { Products: string };
+};
 
-export  async function generateMetadata({ params }: { params: { Products: string } }){
-  console.log(params,'metadata')
-  
-  const { Products } =await params;
+
+export async function generateMetadata({ params }: PageProps) {
+  console.log(params, 'metadata');
+
+  const productId = Number(params.Products);
   let ProductDetails = null;
 
-  if (Products) {
-    ProductDetails = await productServices.getProductsByid(Number(Products));
+  if (!isNaN(productId)) {
+    ProductDetails = await productServices.getProductsByid(productId);
   }
-  return{
-   title: ProductDetails.title
-  }
+
+  return {
+    title: ProductDetails ? ProductDetails.title : "Product Details",
+  };
 }
+
 
 type ProductDetailsProps = {
   params: { Products: string };
 };
 
 
-export default async function ProductDetails({ params }: { params: { Products: string } }) {
-  console.log(params, "from product details");
+ async function ProductPage({ params }: PageProps) {
+  // const { Products } = params;
+  const productId = Array.isArray(params.Products) ? params.Products[0] : params.Products;
 
-  const { Products } =await params;
   let ProductDetails = null;
 
-  if (Products) {
-    ProductDetails = await productServices.getProductsByid(Number(Products));
+  if (productId) {
+    ProductDetails = await productServices.getProductsByid(Number(productId));
   }
 
   return (
@@ -63,3 +69,4 @@ export default async function ProductDetails({ params }: { params: { Products: s
     </div>
   );
 }
+export default ProductPage

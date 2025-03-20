@@ -1,7 +1,7 @@
  "use client"
 import { useRouter } from 'next/navigation'
 import React from 'react'
-import styles from '../Products/[Products]/prod.module.css'
+import styles from '../products2/[productId]/prod.module.css'
 import { useCart } from "../context/CartContext";
 
 

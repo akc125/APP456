@@ -1,8 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { productServices } from "./Services/services";
-import ProductSearch from "./Products/page";
 import Footer from "./Components/Footer/Footer";
+import ProductSearch from "./products2/page";
 //import ProductLayout from "./Products/layout";
 
 export default async function Home() {

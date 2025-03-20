@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useCart } from "../context/CartContext";
-import styles from "../Products/[Products]/prod.module.css";
+import styles from "../products2/[productId]/prod.module.css";
 import Image from "next/image";
 
 
